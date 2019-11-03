@@ -1,0 +1,69 @@
+<form>
+    <div class="form-group">
+        <label for="adviceTitle"> Advice title</label>
+        <input [(ngModel)]="adviceTitle" name="adviceTitle" type="text" class="form-control" id="adviceTitle">
+    </div>
+    <div class="form-group">
+        <label for="adviceDescription">Advice description</label>
+        <textarea [(ngModel)]="adviceDescription" name="adviceDescription" class="form-control" rows="8"
+            id="adviceDescription"></textarea>
+    </div>
+    <!-- завантаження фото -->
+    <div class="form-group">
+        <div class="custom-file">
+            <input (change)="upload($event)" accept=".png,.jpg,.jpeg" type="file" class="custom-file-input"
+                id="photoFile" required>
+            <label class="custom-file-label" for="photoFile">Choose file...</label>
+        </div>
+        <div class="progress mt-2">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+                [style.width]="(uploadProgress | async) + '%'" [attr.aria-valuenow]="(uploadProgress | async)"
+                aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div *ngIf="downloadURL | async; let downloadSrc" class="alert alert-info" role="alert">
+            File uploaded: <a [href]="downloadSrc">{{downloadSrc}}</a>
+        </div>
+        <div class="btn-group" role="group" *ngIf="uploadState | async; let state">
+            <button type="button" class="btn btn-primary" (click)="task.pause()"
+                [disabled]="state === 'paused'">Pause</button>
+            <button type="button" class="btn btn-primary" (click)="task.cancel()"
+                [disabled]="!(state === 'paused' || state === 'running')">Cancel</button>
+            <button type="button" class="btn btn-primary" (click)="task.resume()"
+                [disabled]="state === 'running'">Resume</button>
+        </div>
+    </div>
+
+    <button *ngIf="!editStatus" (click)="isAddAdvice()" type="button" class="btn btn-success btn-block">Add</button>
+    <button *ngIf="editStatus" (click)="isSaveEditAdvice()" type="button" class="btn btn-success btn-block">Save
+        edit</button>
+</form>
+<hr>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <th>#</th>
+            <th>title</th>
+            <th>description</th>
+            <th>image</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let advice of adminAdvices; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{advice.title}}</td>
+                <td>{{advice.description}}</td>
+
+                <td>
+                    <img [src]="advice.image" alt="" style="width: 80px;height:70px">
+                </td>
+                <td>
+                    <button class="btn btn-warning" (click)="isEditAdvice(advice)">Edit</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="isDeleteAdvice(advice)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

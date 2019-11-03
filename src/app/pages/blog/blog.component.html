@@ -1,0 +1,20 @@
+<div style="position:relative">
+    <img id="imgBlog" src="assets/images/blog.jpg" alt="">
+    <div>
+        <div id="down" (click)="scrollDown()"><i class="fas fa-chevron-down fa-2x circle"></i>
+        </div>
+        <div id="scrollPos"> </div>
+    </div>
+</div>
+<div class="card adviceBody text-center" *ngFor="let advice of arrAdvices | paginate: {itemsPerPage:3, currentPage: p}">
+    <h5 class="card-header advTitle">{{advice.title}}</h5>
+    <div class="card-body  ">
+        <span class="card-text advText">{{advice.description}}</span>
+        <div>
+            <img class="card-img-bottom mt-3" [src]="advice.image" style="width: 80%;height:inherit;object-fit:contain">
+        </div>
+    </div>
+</div>
+<pagination-controls class="my-pagination" (pageChange)="p =$event"></pagination-controls>
+
+<app-footer></app-footer>

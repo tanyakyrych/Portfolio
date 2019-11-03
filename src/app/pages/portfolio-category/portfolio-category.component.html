@@ -1,0 +1,25 @@
+<div class=" d-flex justify-content-around align-items-center header semiBoldSize24">
+    <ul style="list-style-type: none">
+        <li><a style="text-decoration: none" routerLink='/portfolio'>all</a>
+        </li>
+    </ul>
+    <ul *ngFor="let categ of categories" style="list-style-type: none">
+        <li> <a style="text-decoration: none" [routerLink]="[ '/portfolio',categ.name ]"
+                routerLinkActive="active">{{categ.name}} </a>
+        </li>
+    </ul>
+</div>
+<!-- grid при виборі категорії -->
+<div id="albums" class="wrapper">
+    <div class="hoverEffect" *ngFor="let photo of photos |select: photoCategory">
+        <a [routerLink]="[ '/portfolio', photo.category.name, photo.title ]" class="overImg"><img class="btn"
+                [src]="photo.image" [ngClass]="{'gridImg': true}">
+            <div class="hoverBox">
+                <div class="hoverText">{{photo.title}}</div>
+            </div>
+        </a>
+    </div>
+</div>
+<footer class="p-0 m-0">
+    <app-footer></app-footer>
+</footer>

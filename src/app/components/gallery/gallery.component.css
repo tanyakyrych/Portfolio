@@ -1,0 +1,17 @@
+/* p {
+    font-family: Lato;
+  } */
+.slick-container{
+      width: 100%;
+      left:0;
+      padding-bottom: 2%;
+}
+.img-thumbnail {
+      padding: .15rem;
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: .25rem;
+      max-width: 100%;
+      object-fit: cover;
+}
+ 

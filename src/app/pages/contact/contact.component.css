@@ -1,0 +1,201 @@
+#imgContact{
+  width: 100%;
+  height: 100vh;
+}
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(255,255,255);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.title {
+    color: rgb(229,2,16);
+    font-size: 20px;
+    font-family:"SourceSansPro-SemiBold";
+}
+.panelRed{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(202,2,14); 
+    color: rgb(255,255,255);
+    font-size: 20px;
+    font-family: "SourceSansPro-Regular";
+}
+.contactForm{
+  width: 55%;
+  margin: 0 auto;
+  padding-top: 2vh;
+}
+.labelText{
+  font-size: 18px;
+  font-family: "SourceSansPro-Regular";
+  color: rgb(202,2,14);
+}
+.thanksWord{
+    width: 100%;
+    height: 30vh;
+    padding-top:8vh; 
+    color: rgb(229,2,16);
+    text-align: center;
+    line-height: 0.9;
+    font-size: 20px;
+    font-family: "SourceSansPro-Regular";
+    text-transform: uppercase;
+}
+.button {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    width:100%;
+    height: 28px;
+    background-color: rgb(255,255,255);
+    color: rgb(202, 2, 14);
+
+}
+.posButton{
+  width: 30%;
+  margin: 0 auto 8% auto;
+  
+}
+
+.textButtonRed{
+    font-size: 18px;
+    font-family: "SourceSansPro";
+    color: rgb(202, 2, 14);
+    line-height: 0.6;
+ 
+}
+.map{
+  width: 55%;
+  height: 60vh;
+  margin: 0 auto;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+   /* scroll down */
+.circle{
+  position: absolute;
+  left: 45%;
+  top:88%;
+  color: rgb(255,255,255);
+  cursor: pointer;
+}
+.circle:hover{
+  color: rgb(202,2,14);
+}
+@media screen and (max-width: 1024px) {
+  .menu-item{
+    font-size: 19px;
+  }
+  .title{
+    font-size: 19px;
+  }
+  .panelRed{
+    font-size: 19px;
+  }
+  .thanksWord{
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .title{
+    font-size: 18px;
+  }
+  .panelRed{
+     font-size: 18px;
+  }
+  .thanksWord{
+    font-size: 18px;
+  }
+   .textButtonRed{
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #down{
+    display: none;
+  }
+  #imgContact{
+    width: 100%;
+  }
+  .header{
+    display: none;
+  }
+  .title{
+    font-size: 17px;
+  }
+  .thanksWord{
+    font-size: 17px;
+    height: 27vh;
+  }
+  .panelRed{
+   height: 60px;
+   font-size: 17px;
+  }
+  .labelText{
+    font-size: 17px;
+  }
+  .button{
+    width: 120px;
+    height: 28px;
+  }
+  .textButtonRed{
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 560px) {
+ 
+  #down{
+    display: none;
+  }
+  .title{
+    font-size: 17px;
+  }
+ 
+  .textButtonRed{
+    font-size: 15px;
+  }
+  .button{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .panelRed{
+    font-size: 15px;
+  }
+  #imgContact{
+    display: none;
+  }
+  .header{
+   height: 0;
+    display: none;
+  }
+  .thanksWord{
+    font-size: 15px;
+  }
+  .labelText{
+    font-size: 15px;
+  }
+  .button{
+    width: 100%;
+  }
+
+}
+@media screen and (max-width: 420px) {
+ .contactForm{
+   width: 90%;
+ }
+}
+@media screen and (max-width: 300px) {
+  .thanksWord{
+    font-size: 12px;
+  }
+  .panelRed{
+    font-size: 12px;
+  }
+  .textButtonRed{
+    font-size: 12px;
+  }
+}

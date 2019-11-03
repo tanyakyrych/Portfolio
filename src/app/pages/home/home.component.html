@@ -1,0 +1,142 @@
+<div style="position:relative">
+  <img src="assets/images/rover.png" id="rover" alt="">
+  <div id="teza">
+    <p>every picture tells a story...</p>
+    <p> let me help you tell yours</p>
+  </div>
+  <div>
+    <div id="down" (click)="scrollDown()"><i class="fas fa-chevron-down fa-2x circle"></i>
+    </div>
+    <div id="scrollPos"> </div>
+  </div>
+</div>
+<!-- about -->
+<table id="sectionAbout">
+  <tr>
+    <td id="aboutPic">
+      <img src="assets/images/about.png" alt="">
+    </td>
+    <td id="aboutText">
+      <div class="titleAbout">ABOUT ME </div>
+      <p class="aboutBody">{{homeText}}</p>
+      <div class="d-flex justify-content-center">
+        <div class="button buttonRedLine">
+          <a class="textButtonRed" routerLink="/info">READ MORE </a>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+<!-- recent -->
+<div class="containerCarousel m-0">
+  <div class="titleRecent ">recent</div>
+  <div id="sliderCarousel">
+    <!-- <app-carousel></app-carousel> -->
+    <app-gallery></app-gallery>
+  </div>
+</div>
+<!-- why ------------------->
+<div class="m-0 containerWhy">
+  <div class="titleWhy">why people choose me</div>
+  <div class="m-0 why ">
+    <div class="box">
+      <figure>
+        <img src="assets/why/clock.png" class="iconWhy">
+        <figcaption>
+          On-time fast service
+        </figcaption>
+      </figure>
+    </div>
+    <div class="box">
+      <figure>
+        <img src="assets/why/quality.png" class="iconWhy">
+        <figcaption>
+          High quality products and services
+        </figcaption>
+      </figure>
+    </div>
+    <div class="box">
+      <figure>
+        <img src="assets/why/approach.png" class="iconWhy">
+        <figcaption>
+          Individual approach to each client
+        </figcaption>
+      </figure>
+    </div>
+    <div class="box ">
+      <figure>
+        <img src="assets/why/various.png" class="iconWhy">
+        <figcaption>
+          Various photography package
+        </figcaption>
+      </figure>
+    </div>
+    <div class="box ">
+      <figure>
+        <img src="assets/why/love.png" class="iconWhy">
+        <figcaption>
+          I love my job and the people
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+</div>
+<div class=" panelRed  m-0 ">
+  <div class="posShoot">
+    <span>READY TO BOOK A PHOTO SHOOT?</span><br>
+    <span>+38 098 92 98 680</span>
+  </div>
+</div>
+
+<!-- how----------------------------- -->
+<div class="containerHow m-0">
+  <div class="titleHow">how does it work</div>
+  <div class="row  m-0 stepsBlock ">
+    <div class="step">
+      <figure>
+        <i class="fas fa-mobile-alt fa-2x"></i>
+        <figcaption>
+          Call me and set an appointment
+        </figcaption>
+      </figure>
+    </div>
+    <div class="step">
+      <figure>
+        <i class="far fa-comments fa-2x"></i>
+        <figcaption>
+          Meet and discuss the job
+        </figcaption>
+      </figure>
+    </div>
+    <div class="step ">
+      <figure>
+        <i class="fas fa-check fa-2x"></i>
+        <figcaption>
+          Provide my high class services
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="step ">
+      <figure>
+        <i class="fab fa-sketch fa-2x"></i>
+        <figcaption>
+          Provide my high class services
+        </figcaption>
+      </figure>
+    </div>
+    <div class="step ">
+      <figure>
+        <i class="far fa-heart fa-2x"></i>
+        <figcaption>
+          You enjoy the memories for years to come
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<footer class="p-0 m-0">
+  <app-footer></app-footer>
+</footer>

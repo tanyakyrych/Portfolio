@@ -1,0 +1,36 @@
+<div style="position:relative">
+  <img id="imgInfo" src="assets/images/info.png" alt="">
+  <div class=" d-flex justify-content-center align-items-center header">
+    <span class="title">INFO</span>
+  </div>
+  <div class="posHeart">
+    <div class="heartTitle ">
+      <p class="css-typing">I'M TANYA MATVIISHENA</p>
+    </div>
+    <div class="d-flex justify-content-start heart">
+      <div>
+        <p>I</p>
+      </div>
+      <div>
+        <img src="assets/images/heart.png" class="iconHeart" alt="">
+      </div>
+      <p class="css-typing1">PHOTOGRAPHY</p>
+    </div>
+  </div>
+  <div>
+    <div id="down" (click)="scrollDown()"><i class="fas fa-chevron-down fa-2x circle"></i>
+    </div>
+    <div id="scrollPos"> </div>
+  </div>
+</div>
+
+<div class="row m-0">
+  <div class="col-1 "></div>
+  <div class="col-10 pt-4 pl-2 pr-2 pb-4 textInfo">
+    <p>{{infoText}}</p>
+  </div>
+  <div class="col-1"></div>
+</div>
+<div class="m-0">
+  <app-footer></app-footer>
+</div>

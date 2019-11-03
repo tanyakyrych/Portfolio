@@ -1,0 +1,88 @@
+<div ngxUiLoaderBlurred>
+  <!-- vertical -->
+  <div class="row m-0">
+    <header id="header" class="p-0">
+      <div id="menu" class="d-flex flex-column mb-0 " >
+        <div style="height: 20%">
+          <div id="logo">
+            <a class="" routerLink="/home" routerLinkActive="active">
+              <span> TANYA MATVIISHENA </span><br>
+              <span class="small">PHOTOGRAPHER</span>
+            </a>
+          </div>
+        </div>
+          <div id="menuLink">
+          <div id="portfolio" class=" menu-item ">
+            <a routerLink="/portfolio" routerLinkActive="active">
+              portfolio
+            </a>
+          </div>
+          <div id="info" class=" menu-item ">
+            <a routerLink="/info" routerLinkActive="active">
+              info
+            </a>
+          </div>
+          <div id="contact" class=" menu-item  ">
+            <a routerLink="/contact" routerLinkActive="active">
+              contact
+            </a>
+          </div>
+          <div id="blog" class=" menu-item ">
+            <a routerLink="/blog" routerLinkActive="active">
+              blog
+            </a>
+          </div>
+          <!-- <div id="admin" class=" menu-item ">
+            <a routerLink="/admin">
+              admin
+            </a>
+          </div> -->
+        </div>
+        <div class="emptyUp"></div>
+        <div id="phone" class="p-0 menu-item ">
+          +380 98 92 98 680
+        </div>
+        <div id="email" class="pt-2 small">
+          <a href="mailto:tanyamatv@hotmail.com">tanyamatv@hotmail.com</a>
+        </div>
+        <div class="emptyDown"></div>
+        <div class=" menu-item social">
+          <a href="https://www.facebook.com/tanya.matviyishena" target="_blank">
+            <img src="assets/images/facebook.png" />
+          </a>
+          <a href="https://www.instagram.com/matviishena_tetiana" target="_blank">
+            <img src="assets/images/insta.png" />
+          </a>
+          <a href="http://pinterest.com/tanya.matviyishena" target="_blank">
+            <img src="assets/images/pinterest.png" />
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class=" ml-0 p-0 mainContainer">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+
+<!-- horizontal -->
+<header id="blockHor" class="col-12 p-0 m-0">
+  <nav id="logoHor" class="navbar navbar-dark  menu-item bd-navbar" style="line-height:1">
+    <a class="navbar-brand tmatv" routerLink="/home" routerLinkActive="active">
+      <span> TANYA MATVIISHENA </span><br>
+      <span class="small">PHOTOGRAPHER</span>
+    </a>
+    <div id="mySidenav" class="sidenav" onclick="closeNav()">
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+      <a class="nav-link" routerLink="/portfolio" routerLinkActive="active"> portfolio
+      </a>
+      <a class="nav-link" routerLink="/info" routerLinkActive="active">info</a>
+      <a class="nav-link" routerLinkActive="active" routerLink="/contact">contact</a>
+      <a class="nav-link" routerLinkActive="active" routerLink="/blog">blog</a>
+      <!-- <a class="nav-link" routerLink="admin">admin</a> -->
+    </div>
+    <span style="font-size:30px;cursor:pointer;color: rgb(255,255,255)" onclick="openNav()">&#9776;</span>
+  </nav>
+</header>
+
+<ngx-ui-loader pbColor="rgb(202,2,14)" fgsColor="rgb(202,2,14)" fgsSize="40"></ngx-ui-loader>

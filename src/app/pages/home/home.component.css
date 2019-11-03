@@ -1,0 +1,465 @@
+#rover{
+  width: 100%;
+  height: 100vh;
+  /* height: auto; */
+  /* max-height: 100vh; */
+  /* object-fit: cover; */
+}
+#teza{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: rgb(255,255,255);
+  text-transform: uppercase;
+  line-height: 0.8;
+  font-size: 22px;
+  font-family:"SourceSansPro-SemiBold";
+  /* border: 1px solid red; */
+}
+/* scroll down */
+.circle{
+  position: absolute;
+  left: 45%;
+  top:88%;
+  color: rgb(255,255,255);
+  cursor: pointer;
+}
+.circle:hover{
+  color: rgb(202,2,14);
+}
+#sectionAbout{
+  padding: 2% 5% 0 5%;
+
+}
+#aboutPic {
+  width: 45%;
+}
+#aboutPic img {
+  width: 80%;
+  height: 100%;
+  object-fit: contain;
+  margin-left: 5%;
+}
+#aboutText {
+  vertical-align: top;
+  padding: 2% 5% 2% 5%;
+}
+.titleAbout {
+  margin-top:5%;
+  margin-bottom: 5%;
+  color: rgb(229, 2, 16);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family:"SourceSansPro-SemiBold";
+
+}
+.aboutBody {
+  color: rgb(98, 101, 109);
+  font-size: 18px;
+  font-family:"SourceSansPro-Light";
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.button {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 20px;
+  width: 135px;
+  height: 28px;
+
+}
+.button:hover{
+  background-color: rgb(229,2,16);
+}
+.button:active{
+  background-color: rgb(202, 2, 14);
+
+}
+.buttonRedLine {
+  border-color: rgb(202, 2, 14);
+  margin: 4% auto;
+  cursor: pointer;
+}
+.textButtonRed{
+  font-size: 18px;
+  font-family: "SourceSansPro-Regular";
+  color: rgb(202, 2, 14);
+  line-height: 1.2;
+   text-decoration: none;
+  padding-left: 22px;
+}
+.textButtonRed:hover{
+  color: rgb(255,255,255);
+}
+/* recent */
+#sliderBootstrap{
+  display: none;
+}
+.containerCarousel{
+  width: 100%;
+  min-height: 20vh;
+  padding-bottom:43px; 
+  background-image: url("src/assets/images/background-recent.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: rgb(81,85,95);
+}
+.titleRecent{
+  text-transform: uppercase;
+  text-align: center;
+  padding: 4%;
+  color: rgb(255,255,255);
+  font-size: 20px;
+  font-family:"SourceSansPro-SemiBold";
+}
+#sliderCarousel{
+margin-bottom: 2%;
+width: 100%;
+}
+
+/* why */
+.containerWhy{
+  min-height: 20vh;
+  margin: 0 0.5% 0 0.5%;
+  background-color: rgb(255,255,255);
+  padding-top: 5%;
+  padding-bottom: 5%;
+  
+}
+.why{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.titleWhy{
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 5%;
+  color: rgb(229,2,16);
+  font-size: 20px;
+  font-family:"SourceSansPro-SemiBold";
+}
+.iconWhy{
+  width: 40%;
+  height: 40%;
+}
+.box {
+  width: 12%;
+  text-align: center;
+  color: rgb(98, 101, 109);
+  line-height: 1;
+  font-size: 17px;
+  font-family:"SourceSansPro-Light";
+}
+figcaption{
+  margin-top: 10px;
+}
+
+.panelRed{
+  position: relative;
+  height: 16%;
+  background-color: rgb(202,2,14); 
+  color: rgb(255,255,255);
+  text-align: center;
+  line-height: 1.2;
+  font-size: 20px;
+  font-family: "SourceSansPro-Regular";
+}
+.posShoot{
+  width: 300px;
+  max-height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+/* how */
+.containerHow{
+  padding-bottom: 6%;
+  padding-top: 5%;
+  margin: 0 0.5% 0 0.5%;
+  background-image: url("src/assets/images/background-recent.png");
+  background-repeat: no-repeat;
+  background-color: rgb(81,85,95);
+  background-size: 100%;
+}
+.titleHow{
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom:5%; 
+  color: rgb(255,255,255);
+  font-size: 20px;
+  font-family:"SourceSansPro-SemiBold";
+}
+.stepsBlock{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.step {
+  width: 12%;
+  text-align: center;
+  color: rgb(255,255,255);
+  line-height: 1.1;
+  font-size: 17px;
+  font-family:"SourceSansPro-Light";
+}
+.step i{
+  color:rgb(202,2,14);
+}
+
+.block-1-5{
+  padding: 10px 20px;
+}
+  @media screen and (max-width: 1024px) {
+    #teza{
+      font-size: 20px;
+    }
+    .titleAbout{
+      font-size: 19px;
+    }
+    .aboutBody{
+      font-size: 17px;
+      line-height: 1.1;
+    }
+    .textButtonRed{
+      font-size: 17px;
+    }
+    .titleRecent{
+      font-size: 19px;
+    }
+    .titleWhy{
+      font-size: 19px;
+    }
+    .iconWhy{
+      width: 45%;
+      height: 45%;
+    }
+    .box{
+      font-size: 16px;
+    }
+    .panelRed{
+      font-size: 19px;
+    }
+/* how */
+    .titleHow{
+      font-size: 19px;
+    }
+    .step{
+      font-size: 16px;
+    }
+  }
+@media screen and (max-width: 960px) {
+  #teza{
+    font-size: 20px;
+  }
+  #aboutPic img{
+   height: 63vh;
+   }
+  .titleAbout{
+    font-size: 18px;
+  }
+  .aboutBody{
+    font-size: 16px;
+  }
+  .titleRecent{
+    font-size: 18px;
+  }
+ .titleWhy{
+  font-size: 18px;
+ }
+
+ .panelRed{
+  font-size: 18px;
+ }
+ .box{
+  font-size: 15px;
+ }
+
+ .titleHow{
+  font-size: 18px;
+ }
+ .step{
+  font-size: 15px;
+ }
+}
+@media screen and (max-width: 920px) {
+  .aboutBody{
+    font-size: 15px;
+  }
+  .iconWhy{
+  width: 45%;
+  height: 45%;
+  }
+  .box{
+    font-size: 14px;
+  }
+  .step{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 805px) {
+  #teza{
+    font-size: 19px;
+  }
+  #aboutPic {
+    display: none;
+  }
+  .titleAbout{
+    font-size: 19px;
+  }
+  .aboutBody{
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .titleRecent{
+    font-size: 19px;
+  }
+  .titleWhy{
+    font-size: 19px;
+  }
+  .iconWhy{
+    width: 50%;
+    height: 50%;
+    }
+  .box{
+    font-size: 13px;
+  }
+  .titleHow{
+    font-size: 19px;
+  }
+  .step{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #rover{
+    width: 100%;
+  }
+  #down{
+    display: none;
+  }
+  #teza{
+    font-size: 17px;
+  }
+ #aboutText{
+   padding: 0 4% 2% 4%;
+ }
+  .titleAbout{
+    font-size: 18px;
+  } 
+  .aboutBody{
+    font-size: 17px;
+  } 
+  .button{
+    width: 125px;
+  }
+  .textButtonRed{
+   line-height: 0.6;
+   padding-left: 20px;
+  }
+  .titleRecent{
+    font-size: 18px;
+  }
+  .titleWhy{
+    font-size: 18px;
+  }
+  .box{
+    font-size: 12px;
+  }
+  .panelRed{
+    font-size: 16px;
+  }
+  .titleHow{
+    font-size: 18px;
+  }
+  .step{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 568px) {
+  #teza{
+    font-size: 16px;
+  }
+  .titleAbout{
+    margin-top: 5%;
+    font-size: 19px;
+  } 
+  .aboutBody{
+    font-size: 16px;
+  }
+  .button{
+    width: 103px;
+  }
+  .textButtonRed{
+    font-size: 15px;
+    padding-left: 12px;
+  }
+  .titleRecent{
+    font-size: 19px;
+  }
+  .containerWhy{
+    display: none;
+  }
+  .titleWhy{
+    font-size: 19px;
+  }
+  .titleHow{
+    font-size: 19px;
+  }
+  .stepsBlock{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .step{
+    width: 100%;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #teza{
+    font-size: 15px;
+  }
+  .titleHow{
+    font-size: 17px;
+  }
+  .titleWhy{
+    font-size: 17px;
+  }
+  .titleRecent{
+    font-size: 17px;
+  }
+  .titleAbout{
+    font-size: 17px;
+  }
+  .aboutBody{
+    font-size: 15px;
+  }
+  .panelRed{
+    font-size: 15px;
+  }
+  
+}
+@media screen and (max-width: 420px) {
+ #rover{
+  display: none;
+ }
+ #teza{
+  display: none;
+ }
+ #sectionAbout{
+    margin-top: 70px;
+ }
+ .posShoot{
+    width: 250px;
+ }
+ 
+}
+
+
+

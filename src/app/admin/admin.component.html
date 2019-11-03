@@ -1,0 +1,48 @@
+<div class="container-fluid containerAdmin">
+    <div class="col">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true" routerLinkActive="active"
+                    routerLink="recent">Recent</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true" routerLinkActive="active"
+                    routerLink="all-photos">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true" routerLinkActive="active"
+                    routerLink="categories">Category</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true" routerLinkActive="active"
+                    routerLink="contacts">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true" routerLinkActive="active"
+                    routerLink="subscribes">Subscribe</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true" routerLinkActive="active"
+                    routerLink="blogs">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true" routerLinkActive="active"
+                    routerLink="about">About</a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="col">
+        <div class="tab-content" id="pills-tabContent">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

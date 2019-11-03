@@ -1,0 +1,24 @@
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <th>#</th>
+            <th>Email adress</th>
+            <th>Checked</th>
+            <th>Answer</th>
+
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of adminSubscribe; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{item.email}}</td>
+                <td [ngClass]="{'bg-success': status}">
+                    <input type="checkbox" [(ngModel)]="item.status" [name]="item.id" (ngModelChange)=change(item)>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="isDelSubscribe(item)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

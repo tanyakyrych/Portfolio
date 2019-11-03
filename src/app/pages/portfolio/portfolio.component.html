@@ -1,0 +1,54 @@
+<div id="headerC">
+    <div class=" d-flex justify-content-around align-items-center header">
+        <ul style="list-style-type: none">
+            <li><a style="text-decoration: none" routerLink="/portfolio" (click)="isGetCategory($event)">
+                    all</a></li>
+        </ul>
+        <ul *ngFor="let categ of categories" style="list-style-type: none">
+            <li> <a style="text-decoration: none" routerLink="/portfolio" (click)="isGetCategory($event)">{{categ.name}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="categoryBurger">
+    <nav class="navbar bd-navbar p-0">
+        <div style="padding-top: 8px;padding-left: 16px">
+            <span class="small" style="line-height:1;color: white">CATEGORIES</span>
+            <i class="fas fa-long-arrow-alt-right" style="color: white;padding-left: 10px"></i>
+        </div>
+        <div id="mySidenavC" class="sidenav" onclick="closeNavC()">
+            <a href="javascript:void(0)" class="closebtn">&times;</a>
+            <a class="nav-link" style="text-decoration: none" routerLink="/portfolio" (click)="isGetCategory($event)">
+                all</a>
+            <div *ngFor="let categ of categories" style="list-style-type: none">
+                <a style="text-decoration: none" routerLink="/portfolio" (click)="isGetCategory($event)">{{categ.name}}
+                </a>
+            </div>
+        </div>
+        <div>
+            <span class="icon"
+                style="font-size:30px;cursor:pointer;color: rgb(255,255,255);position: absolute;top: 0;right: 17px"
+                onclick="openNavC()">&#9871; </span>
+        </div>
+    </nav>
+</div>
+
+<!-- grid  -->
+<div id="albums" class="wrapper">
+    <div *ngFor="let photo of photos  |select:categoryName | paginate: {itemsPerPage:12, currentPage: p}">
+        <a [routerLink]="[ '/portfolio', photo.category.name, photo.title ]" class="box">
+            <img [src]="photo.image" [ngClass]="{'gridImg': true}">
+            <div class="hover-effect">
+                <div class="hover-text">
+                    <h4>{{photo.title}}</h4>
+                    <p>PHOTOSESSION<p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<pagination-controls class="my-pagination" (pageChange)="p =$event" responsive="true"></pagination-controls>
+<footer class="p-0 m-0">
+    <app-footer></app-footer>
+</footer>

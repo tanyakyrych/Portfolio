@@ -1,0 +1,152 @@
+.header {
+   width: 75%;
+   height: 70px;
+   background-color: rgb(255,255,255);
+   position: fixed !important;
+   top: 0;
+   left: 25%;
+   right: 0;
+   z-index: 5;
+   padding: 0 1%;
+   border-bottom: 1px solid grey;
+   font-size: 20px;
+   font-family:"SourceSansPro-SemiBold";
+}
+.btnText{
+   font-size: 17px;
+   font-family:"SourceSansPro-Regular";
+   color: rgb(229,2,16);
+}
+.btnTextC{
+   font-size: 17px;
+   font-family:"SourceSansPro-Regular";
+   color: rgb(229,2,16);
+   text-decoration: none;
+   cursor: text;
+}
+.upperCase{
+  text-transform: uppercase;
+  color: rgb(229,2,16);
+
+}
+#albums{
+    width: 99%;
+    margin: 85px 0.5% 0.5% 0.5%;
+    position: relative;
+
+}
+ .wrapper{
+ display: grid;
+ grid-template-columns:1fr 1fr;
+ grid-template-rows: 2fr 2fr;
+ grid-gap: 15px;
+}
+#zoom{
+   display:none;
+}
+.gridImg{
+    width: 100%;
+    height: 42vh;
+    object-fit: cover;
+}
+ .hoverEffect{
+    position: relative;
+    width: 100%;
+    height: 42vh; 
+ }
+.bgcModal{
+   background-color:rgb(54,60,58);
+   color: rgb(255,255,255);
+ 
+ }
+.imageBox{
+    width:100%;
+}
+.image-item{
+   height:83vh; 
+   width:100%;
+   object-fit: cover;
+   margin: 0 auto;
+}
+.close{
+ color: rgb(255,255,255);
+ position: absolute;
+  right:0;
+ top:-7px;
+}
+@media screen and (max-width: 1024px) {
+   .header{
+      font-size: 19px;
+   }
+}
+@media screen and (max-width: 960px) {
+   .header{
+      font-size: 18px;
+   }
+   .btnText{
+      font-size: 16px;
+
+   }
+}
+@media screen and (max-width: 768px) {
+   .header {
+      width: 100%;
+      height: 50px;
+      position: fixed !important;
+      top: 70px;
+      left:0;
+      z-index: 5;
+      border-bottom: 1px solid grey;
+     font-size: 17px;
+     background-color:rgb(0,0,0);
+}
+  .header a{
+   color: rgb(255,255,255);
+}
+.header a:hover{
+ color:rgba(255,255,255,0.8);
+}
+.header a:focus{
+ color: rgb(202,2,14);
+}  
+  #albums{
+   width: 99%;
+   margin: 130px 0.3%  1% 0.3%;
+  }
+  .btnText{
+     color: rgb(255,255,255);
+  }
+  .btnTextC{
+   color: rgb(255,255,255);
+  }
+  .upperCase{
+   color: rgb(255,255,255);
+   
+  }
+   .image-item{
+      height: 78vh;
+   }
+   .modal{
+      margin-top: 43px;
+   }
+}
+
+@media screen and (max-width: 560px) {
+   .wrapper{
+     display: grid;
+     grid-template-columns:1fr;
+     grid-template-rows: 2fr;
+     grid-gap: 15px;
+   }
+.modal{
+   margin-top: 63px;
+}
+
+}
+@media screen and (max-width: 480px) {
+   .btnTextC{
+      display: none;
+   }
+}
+
+ 

@@ -1,0 +1,423 @@
+#blockVert{
+  display: block;
+}
+#header{
+  width: 25%;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left:0;
+}
+#hor{
+  display: none;
+}
+ #blockHor{
+   display:none;
+}
+.mainContainer {
+  height: 100vh;
+  width: 75%;
+  overflow-y: auto;
+  position: relative;
+  top: 0;
+  left: 25%;
+}
+#menu {
+  height: 100%;
+  padding-top: 10%;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+#imgLogo{
+  object-fit: contain;
+  width:90%;
+  height:88%; 
+ }
+#logo{
+  line-height:1;
+  font-size: 19px;
+  font-family: "SourceSansPro-Regular";
+  padding-left: 32%;
+  padding-top: 11px;
+}
+#logo a:before{
+  content: "";
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top:40px;
+  top:3%;
+  left:2.5%;
+  background: url("src/assets/images/logo.png");
+  background-repeat:no-repeat; 
+  background-size: contain;
+}
+#logo a {
+  text-decoration: none;
+  color: rgb(255,255,255);
+}
+#logo a:hover {
+  color: rgb(229,2,16);
+}
+#logo a.active {
+  color: rgb(202,2,14);
+}
+#logo a.focus {
+  color: rgb(202,2,14);
+}
+#logoHor{
+  font-size: 19px;
+  font-family: "SourceSansPro-Regular";
+  line-height:1;
+  background-color: rgb(0, 0, 0);
+}
+.emptyUp{
+  height: 13%;
+}
+.emptyDown{
+  height: 2%;
+ }
+#menuLink{
+ margin-top: 22%;
+  height: 30%;
+  flex-direction: column;
+}
+ 
+#portfolio{
+  height: 25%;
+  display: flex;
+  justify-content: center;
+}
+#info{
+  height: 25%;
+  display: flex;
+  justify-content: center;
+
+}
+#contact{
+  height: 25%;
+  display: flex;
+  justify-content: center;
+
+}
+#blog{
+  height: 25%;
+  display: flex;
+  justify-content: center;
+}
+#admin{
+  height: 20%;
+  display: flex;
+  justify-content: center;
+}
+#phone{
+  height: 4%;
+}
+#email {
+  height: 6%;
+  text-transform: none;
+  text-align: center;
+}
+#emailHor{
+  text-transform: none;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.menu-item {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "SourceSansPro-Regular";
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: rgb(255,255,255);
+}
+.menu-item a:hover {
+  color: rgb(229,2,16);
+}
+.menu-item a.active {
+  color: rgb(202,2,14);
+}
+.menu-item a.focus {
+  color: rgb(202,2,14);
+}
+#email a{
+  color: rgb(255,255,255);
+}
+#emailHor a{
+  color: rgb(255,255,255);
+}
+#email a:hover{
+  color: rgb(229,2,16);
+  text-decoration: none;
+}
+#emailHor a:hover{
+  color: rgb(229,2,16);
+  text-decoration: none;
+}
+.social {
+  position: absolute;
+  top:88%;
+}
+.social a {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+#socialHor{
+  padding-top: 1%;
+}
+#socialHor a{
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.social a img {
+  width: 25px;
+  height: 25px;
+}
+#socialHor a img {
+  width: 25px;
+  height: 25px;
+}
+ /* grid */
+ #albums{
+  width: 99%;
+  margin: 85px 0.3%  1% 0.3%;
+}
+.wrapper{
+display: grid;
+grid-template-columns:1fr 1fr;
+grid-template-rows: 2fr 2fr;
+grid-gap: 15px;
+}
+.gridImg{
+  width: 100%;
+  height: 42vh;
+  object-fit: cover;
+  transition: .5s ease;
+}
+.box {
+  position: relative;
+  overflow: hidden;
+  height:42vh;
+  width: 100%;
+  cursor: pointer;
+}
+
+.hover-effect {
+  position: absolute;
+  top: -120px;
+  left: 0;
+  width: 100%;
+  height: 42vh;
+  background: rgba(0,0,0,0.7);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.box:hover .hover-effect {
+  opacity: 1;
+}
+.box:hover .hover-text {
+  right: 0;
+}
+.hover-text {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  max-width: 100%;
+  padding: 40px 65px;
+  color: white;
+  text-decoration: none;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: 400;
+  padding: 0.8em 0;
+  margin-bottom: 0.3em;
+  border-bottom: 1px solid #fff;
+}
+p {
+    width: 100%;
+    line-height: 1.7em;
+    display: inline-block;
+    text-align: right;
+}
+
+/* navbar */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "SourceSansPro-Regular";
+  color: rgb(255,255,255);
+  display: block;
+  transition: 0.3s;
+} 
+
+.sidenav a:hover {
+  color: rgb(255,255,255);
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+  margin-left: 50px;
+
+}
+@media screen and (max-width: 1024px) {
+  .menu-item{
+    font-size: 19px;
+  }
+  #logo{
+    font-size: 18px;
+  }
+  #logo a:before{
+    width: 55px;
+    height: 55px;
+  }
+}
+@media screen and (max-width: 960px) {
+    #logo{
+    font-size: 16px;
+  }
+  .menu-item{
+    font-size: 18px;
+  }
+  #logo a:before{
+    width: 45px;
+    height: 45px;
+    top:3.5%;
+  }
+  #logo{
+    font-size: 15px;
+  }
+
+}
+@media screen and (max-width: 768px) {
+  #vertical{
+    display: none;
+  }
+  #hor{
+    display: block;
+  }
+  #header{
+    display: none;
+  }
+  .mainContainer{
+   width: 100%;
+   left: 0;
+    overflow: inherit;
+    height: 70vh;
+  }
+   #blockHor{
+  display:block;
+  position:fixed;
+  top:0;
+  left: 0;
+  z-index:10;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  }
+  .bd-navbar{
+    min-height: 70px;
+  }
+  .menu-item{
+    font-size: 16px;
+  }
+
+  .tmatv{
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .tmatv{
+    font-size: 16px;
+  }
+  #logoHor{
+    font-size: 16px;
+  }
+  .menu-item{
+    font-size: 15px;
+  }
+  .sidenav a {
+    font-size: 15px;
+  }
+  #emailHor{
+    display: none;
+  }
+}
+@media screen and (max-width: 460px) {
+  .tmatv{
+    font-size: 15px;
+  }
+   #logoHor{
+    font-size: 15px;
+  }
+  .menu-item{
+    font-size: 14px;
+    align-items: center;
+  }
+  .sidenav a {
+    font-size: 14px;
+  }
+  #socialHor a img {
+    width: 17px;
+    height: 17px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .tmatv{
+    font-size: 14px;
+  }
+  .menu-item{
+    font-size: 12px;
+  }
+  #socialHor a img {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .phoneMail{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

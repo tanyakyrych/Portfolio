@@ -1,0 +1,222 @@
+.foot{
+  min-height: 14vh;
+  background-color: rgb(0,0,0);
+ 
+}
+#boxFooter{
+  width: 292px;
+  margin: 0 auto;
+}
+.emailButtonWhite{
+  width: 220px;
+  height: 28px;
+  border-width: 2px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+}
+.emailButtonRed{
+  width: 100px;
+  height: 28px;
+  background-color: rgb(202, 2, 14);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color:rgb(255, 255, 255);
+  cursor: pointer;
+  line-height: 1;
+  font-size: 16px;
+  font-family: "SourceSansPro-Regular";
+}
+.footerText{
+   color: rgb(255, 255, 255);
+   font-size: 17px;
+   font-family: "SourceSansPro-Regular";
+   margin: 0 0 3vh 3vh;
+}
+/* 
+#subButton{
+  margin: 0 2vw;
+} */
+#under768{
+  display: none; 
+}
+#phone{
+  color: rgb(255, 255, 255);
+}
+#email {
+  text-transform: none;
+  text-align: center;
+}
+.menu-item {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "SourceSansPro-Regular";
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: rgb(255,255,255);
+}
+.menu-item a:hover {
+  color: rgb(229,2,16);
+}
+.menu-item a.active {
+  color: rgb(202,2,14);
+}
+.menu-item a.focus {
+  color: rgb(202,2,14);
+}
+#email a{
+  color: rgb(255,255,255);
+}
+
+#email a:hover{
+  color: rgb(229,2,16);
+  text-decoration: none;
+}
+.social {
+  padding-top: 24px;
+}
+.social a {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.invalidInput {
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  /* border-left: 2px solid red; */
+  /* border-bottom: 2px solid red; */
+  /* border-top: 2px solid red; */
+}
+
+.validInput {
+  border-left: 2px solid rgb(40,167,69);
+  border-bottom: 2px solid rgb(40,167,69);
+  /* border-top: 2px solid rgb(40,167,69); */
+}
+
+@media screen and (max-width: 1024px) {
+  .footerText{
+    font-size: 16px;
+ }
+}
+
+@media screen and (max-width: 960px) {
+.footerText{
+   font-size: 15px;
+  margin-left: 6vh;
+
+  }
+ .emailButtonWhite{
+  height: 25px;
+ }
+ .emailButtonRed{
+  height: 25px;
+  line-height: 0.9;
+  font-size: 15px;
+ }
+}
+@media screen and (max-width: 768px) {
+
+#boxFooter{
+  padding-top: 1vh;
+  width: 292px;
+}
+.footerText{
+  margin-left: 5vh;
+
+}
+/* .emailButtonRed{
+  width: 100px;
+  height: 28px;
+  background-color: rgb(202, 2, 14);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color:rgb(255, 255, 255);
+  cursor: pointer;
+  line-height: 1;
+  font-size: 16px;
+  font-family: "SourceSansPro-Regular";
+} */
+ #under768{
+  display: block;
+  width: 100%;
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+ }
+ .social {
+  padding-top: 30px;
+  
+}
+.social a {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+}
+@media screen and (max-width: 560px) {
+  .footerText{
+     font-size: 13px;
+  margin-left: 8vh;
+
+  }
+  /* #subButton{
+  font-size: 12px;
+  } */
+  .emailButtonRed{
+    height: 25px;
+    line-height: 0.9;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 460px) {
+    .emailButtonRed{
+    line-height: 0.9;
+    font-size: 14px;
+   }
+}
+@media screen and (max-width: 420px) {
+  .emailButtonRed{
+    height: 25px;
+    line-height: 0.9;
+    font-size: 13px;
+   }
+}
+
+
+@media screen and (max-width: 360px) {
+  #boxFooter{
+   width: 272px;
+  }
+  .emailButtonWhite{
+    height: 25px;
+    width: 85%;
+    /* border-top-left-radius: 5px; */
+    border-radius:20px; 
+    /* border-bottom-left-radius: 5px; */
+    margin-left: 1.5em;
+   }
+   .emailButtonRed{
+    margin-top: 15px;
+    margin-left: 30%;
+    height: 25px;
+    width: 132px;
+    border-radius: 20px;
+    /* border-color:rgb(255,255,255); */
+
+  }
+}
+
+@media screen and (max-width: 270px) {
+  #boxFooter{
+    display: block;
+    margin: 0 auto;
+  
+  }
+  .footerText{
+    font-size: 11px;
+ }
+}

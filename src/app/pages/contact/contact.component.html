@@ -1,0 +1,59 @@
+<div style="position:relative">
+    <img id="imgContact" src="assets/images/contact2.jpg" alt="">
+    <div>
+        <div id="down" (click)="scrollDown()"><i class="fas fa-chevron-down fa-2x circle"></i>
+        </div>
+        <div id="scrollPos"> </div>
+    </div>
+    <div class=" d-flex justify-content-center align-items-center header">
+        <span class="title">CONTACT</span>
+    </div>
+</div>
+<div class=" d-flex justify-content-center align-items-center panelRed">
+    <span>PLEASE LEAVE YOUR MESSAGE HERE</span>
+</div>
+<div class="contactForm" *ngIf="!statusForm">
+    <form #f="ngForm">
+        <div class="form-group">
+            <label for="username" class="labelText">Name</label>
+            <input type="text" name="username" class="form-control" [(ngModel)]="model.username" #username="ngModel"
+                pattern="^([A-ZА-Я][a-zа-я]{1,30})$" [class.is-invalid]="f.submitted && username.invalid"
+                [class.is-valid]="username.valid" required>
+            <div class="invalid-feedback">Only letters.The first letter is uppercase!</div>
+            <div class="valid-feedback">Name is available</div>
+        </div>
+        <div class="form-group">
+            <label for="phone" class="labelText">Phone</label>
+            <input type="phone" name="userphone" class="form-control" [(ngModel)]="model.userphone" #userphone="ngModel"
+                mask=" (000)-000-00-00" [showMaskTyped]="true" pattern="^[0][0-9]{2}[0-9]{3}[0-9]{2}[0-9]{2}$"
+                [class.is-invalid]="f.submitted && userphone.invalid" [class.is-valid]="userphone.valid" required>
+            <div class="invalid-feedback">Example:(067)-111-11-11</div>
+            <div class="valid-feedback">Phone number is available</div>
+        </div>
+        <div class="form-group">
+            <label for="message" class="labelText">Message</label>
+            <textarea class="form-control" [rows]="4" [cols]="60" [(ngModel)]="model.usermessage" name="usermessage"
+                #usermessage="ngModel" [class.is-invalid]="f.submitted && usermessage.invalid"
+                [class.is-valid]="usermessage.valid" required></textarea>
+            <div class="invalid-feedback">Please fill out this field</div>
+            <div class="valid-feedback">Text is available</div>
+        </div>
+        <div class="posButton">
+            <button type="submit" class="btn btn-outline-danger button textButtonRed"
+                (click)="sendMessage(f)">SEND</button>
+        </div>
+    </form>
+</div>
+<div *ngIf="statusForm">
+    <div class="thanksWord">
+        <p>thanks!</p>
+        <p>I will contact you shortly!</p>
+    </div>
+</div>
+<div class=" d-flex justify-content-center align-items-center panelRed">
+        <span>OFFICE ADDRESS</span>
+    </div>
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.248114401861!2d28.435268415687062!3d49.21482147932401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b8a01c44edb%3A0xdf9a7635ef3c1254!2z0YPQuy4g0JfQvtC00YfQuNGFLCA0MCwg0JLQuNC90L3QuNGG0LAsINCS0LjQvdC90LjRhtC60LDRjyDQvtCx0LvQsNGB0YLRjCwgMjEwMDA!5e0!3m2!1sru!2sua!4v1567080387283!5m2!1sru!2sua" width="100%" height="90%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</div>
+<app-footer></app-footer>

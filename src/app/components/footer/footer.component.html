@@ -1,0 +1,32 @@
+<footer class="m-0 pt-4 pb-3 foot">
+  <div id="boxFooter">
+    <form #f="ngForm">
+      <div class="form-group">
+        <label for="formGroupExampleInput" class="footerText">GET LIST OF PACKAGES VIA EMAIL</label>
+        <div class="row">
+          <input type="email" name="useremail" pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$"
+            class="form-control emailButtonWhite" [(ngModel)]="model.useremail" #useremail="ngModel"
+            [class.invalidInput]="f.submitted && useremail.invalid" [class.validInput]="useremail.valid" required>
+          <input type="submit" class="login100-form-btn emailButtonRed" value="SUBSCRIBE" (click)="sendEmail(f)">
+        </div>
+      </div>
+      <div id="under768">
+        <div id="phone" class="p-0 menu-item">
+          +380 98 92 98 680
+        </div>
+        <div id="email" class="pt-2 small">
+          <a href="mailto:tanyamatv@hotmail.com">tanyamatv@hotmail.com</a>
+        </div>
+        <div class=" menu-item social">
+          <a href="https://www.facebook.com/tanya.matviyishena" target="_blank">
+            <img src="assets/images/facebook.png" />
+          </a>
+          <a href="https://www.instagram.com/matviishena_tetiana/" target="_blank">
+            <img src="assets/images/insta.png" />
+          </a>
+          <a href="http://pinterest.com" target="_blank">
+            <img src="assets/images/pinterest.png" />
+          </a>
+        </div>
+      </div>
+    </form>

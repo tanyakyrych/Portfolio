@@ -1,0 +1,34 @@
+<form>
+    <div class="form-group">
+        <label for="aboutText">Text for Home</label>
+        <textarea [(ngModel)]="aboutText" name="aboutText" class="form-control" rows="8" id="aboutText"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="aboutDetails">Text for Info</label>
+        <textarea [(ngModel)]="aboutDetails" name="aboutDetails" class="form-control" rows="8"
+            id="aboutDetails"></textarea>
+    </div>
+    <button *ngIf="editStatus" (click)="isSaveEditAbout()" type="button" class="btn btn-success btn-block">Save
+        edit</button>
+</form>
+<hr>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <th>#</th>
+            <th>Text for Home</th>
+            <th>Text for Info</th>
+            <th>Edit</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of adminAbout; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{item.text}}</td>
+                <td>{{item.details}}</td>
+                <td>
+                    <button class="btn btn-warning" (click)="isEditAbout(item)">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

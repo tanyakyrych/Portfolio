@@ -1,0 +1,34 @@
+<div class=" d-flex justify-content-between align-items-center header ">
+    <button [routerLink]="[ '/portfolio']" type="button" class="btn btn-link btnText">All photos</button>
+    <span class="upperCase">{{photoTitle}}</span>
+    <a [routerLink]="[ '/portfolio']" routerLinkActive="active" class="btnTextC ">{{photoCategory}}</a>
+</div>
+
+<!-- grid -->
+<div id="albums" class="wrapper">
+    <div class="hoverEffect" *ngFor="let photo of images;let i=index">
+        <img data-toggle="modal" data-target="#imgModal" [src]="photo.image" [ngClass]="{'gridImg': true}"
+            (click)="isGetPhoto(i)">
+    </div>
+    <div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bgcModal ">
+                <!-- Modal body -->
+                <div class="modal-body ">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <ngb-carousel #myCarousel [interval]="false" [activeId]="number">
+                        <ng-template ngbSlide *ngFor="let image of arrImage; let i=index">
+                            <div class="picsum-img-wrapper imageBox">
+                                <img [src]="image" [ngClass]="{'image-item': true}">
+                            </div>
+                            <div class="carousel-caption"></div>
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="p-0 m-0">
+    <app-footer></app-footer>
+</footer>

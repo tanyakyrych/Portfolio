@@ -1,0 +1,8 @@
+<ngb-carousel #myCarousel [interval]="false" >
+        <ng-template ngbSlide *ngFor="let image of arrRecent; let i=index">
+            <div class="picsum-img-wrapper imageBox">
+                <img [src]="image.image" [ngClass]="{'image-item': true}">
+            </div>
+            <div class="carousel-caption"></div>
+        </ng-template>
+    </ngb-carousel>

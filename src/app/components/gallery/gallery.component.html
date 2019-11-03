@@ -1,0 +1,6 @@
+<!-- for home.component -->
+<div class="slick-container m-0">
+    <div *ngFor="let image of arrRecent; let i=index">
+        <img [src]="image.image" [ngClass]="{'img-thumbnail': true}" [alt]="">
+    </div>
+</div>
