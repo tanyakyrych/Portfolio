@@ -9,6 +9,7 @@ Site menu:
 - info
 - contact
 - blog
+
 The **portfolio** contains all photos of the photographer. 
 You can see the title of the photo session when you hover over the photo. When you click on a photo, you can view the current photo session.
 Photos are located in separate categories too. 
